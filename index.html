@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ادمین پنل</title>
+    <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'BYekan', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'BYekan';
+            src: url('BYekan.ttf') format('woff2');
+        }
+    </style>
+</head>
+
+<body dir="rtl" class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 text-white h-screen fixed top-0 right-0 flex flex-col p-4">
+            <h2 class="text-2xl font-bold mb-6">ادمین پنل</h2>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400 active"
+                            data-section="dashboard">داشبورد</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400" data-section="users">کاربران</a>
+                    </li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400"
+                            data-section="products">محصولات</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400" data-section="orders">سفارشات</a>
+                    </li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400"
+                            data-section="reports">گزارش‌ها</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400"
+                            data-section="settings">تنظیمات</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400"
+                            data-section="messages">پیام‌ها</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400"
+                            data-section="notifications">اعلان‌ها</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400"
+                            data-section="analytics">تحلیل‌ها</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400"
+                            data-section="support">پشتیبانی</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400" data-section="logs">لاگ‌ها</a>
+                    </li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400"
+                            data-section="billing">صورتحساب</a></li>
+                    <li class="mb-4"><a href="#" class="nav-link hover:text-blue-400" data-section="security">امنیت</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 mr-64">
+            <!-- Header -->
+            <header class="bg-white shadow p-4 flex justify-between items-center">
+                <h1 class="text-xl font-semibold">خوش آمدید، ادمین</h1>
+                <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">خروج</button>
+            </header>
+
+            <!-- Main Section -->
+            <main class="p-6">
+                <!-- Dashboard -->
+                <div id="dashboard" class="section">
+                    <h2 class="text-2xl font-bold mb-4">داشبورد</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h3 class="text-lg font-semibold">کاربران فعال</h3>
+                            <p class="text-3xl font-bold text-blue-600">1,234</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h3 class="text-lg font-semibold">سفارشات امروز</h3>
+                            <p class="text-3xl font-bold text-green-600">567</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h3 class="text-lg font-semibold">درآمد ماه</h3>
+                            <p class="text-3xl font-bold text-purple-600">12,345,678 تومان</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold">نمودار عملکرد</h3>
+                        <div class="h-40 bg-gray-200 flex items-center justify-center">نمودار (استاتیک)</div>
+                    </div>
+                </div>
+
+                <!-- Users -->
+                <div id="users" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">کاربران</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="p-2">نام</th>
+                                    <th class="p-2">ایمیل</th>
+                                    <th class="p-2">وضعیت</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2">علی احمدی</td>
+                                    <td>ali@example.com</td>
+                                    <td>فعال</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2">رضا محمدی</td>
+                                    <td>reza@example.com</td>
+                                    <td>غیرفعال</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div id="products" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">محصولات</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>لیست محصولات در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Orders -->
+                <div id="orders" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">سفارشات</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>لیست سفارشات در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Reports -->
+                <div id="reports" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">گزارش‌ها</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>گزارش‌های سیستم در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Settings -->
+                <div id="settings" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">تنظیمات</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>تنظیمات سیستم در اینجا قابل تغییر است.</p>
+                    </div>
+                </div>
+
+                <!-- Messages -->
+                <div id="messages" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">پیام‌ها</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>پیام‌های دریافتی در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                <div id="notifications" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">اعلان‌ها</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>اعلان‌ها در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Analytics -->
+                <div id="analytics" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">تحلیل‌ها</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>تحلیل‌های سیستم در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div id="support" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">پشتیبانی</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>بخش پشتیبانی در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Logs -->
+                <div id="logs" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">لاگ‌ها</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>لاگ‌های سیستم در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Billing -->
+                <div id="billing" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">صورتحساب</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>اطلاعات صورتحساب در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div id="security" class="section hidden">
+                    <h2 class="text-2xl font-bold mb-4">امنیت</h2>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p>تنظیمات امنیتی در اینجا نمایش داده می‌شود.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                sections.forEach(section => section.classList.add('hidden'));
+                const sectionId = link.getAttribute('data-section');
+                document.getElementById(sectionId).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
